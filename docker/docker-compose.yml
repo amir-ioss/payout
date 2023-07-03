@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+    usdt_wallet :
+        image: kalidas_wallet:latest
+        volumes:
+            - ../src:/usr/src/app/src
+            - ../logs:/usr/src/app/logs
+            - ../.env:/usr/src/app/.env
+        ports:
+            - 7545:7545
